@@ -4,7 +4,9 @@ let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
 
-
+function displayMessage(message) {
+    ocument.querySelector('.message').textContent = message
+}
 
 document.querySelector('.number').textContent = secretNumber;
 document.querySelector('.check').addEventListener('click', function () {
@@ -12,7 +14,7 @@ document.querySelector('.check').addEventListener('click', function () {
 
   // Check if the guess is no input
   if (!guess) {
-    document.querySelector('.message').textContent = '⛔️ No number!';
+    display'⛔️ No number!';
 
     // when player wins the game
   } else if (guess === secretNumber) {
