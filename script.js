@@ -14,11 +14,11 @@ document.querySelector('.check').addEventListener('click', function () {
 
   // Check if the guess is no input
   if (!guess) {
-    display'⛔️ No number!';
+    displayMessage('⛔️ No number!');
 
     // when player wins the game
   } else if (guess === secretNumber) {
-    document.querySelector('.message').textContent = '🎉 Correct Number!';
+    displayMessage( '🎉 Correct Number!');
     document.querySelector('.number').textContent = secretNumber;
 
     document.querySelector('body').style.backgroundColor = '#60b347';
@@ -31,7 +31,7 @@ document.querySelector('.check').addEventListener('click', function () {
   } else if (guess !== secretNumber) {
 
     if (score > 1) {
-        document.querySelector('.message').textContent =  guess > secretNumber ?'📈 Too High!' : '📉 Too Low!';
+       displayMessage (  guess > secretNumber ?'📈 Too High!' : '📉 Too Low!');
         score--;
         document.querySelector('.score').textContent = score;
       } else {
